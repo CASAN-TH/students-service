@@ -33,18 +33,8 @@ var StudentSchema = new Schema({
     required: "Please fill a Student identificationnumber"
   },
   attendancedate: {
-    day: {
-      type: Number,
-      required: "Please fill a Student day"
-    },
-    month: {
-      type: Number,
-      required: "Please fill a Student month"
-    },
-    year: {
-      type: Number,
-      required: "Please fill a Student year"
-    }
+    type: String,
+    required: "Please fill a Student attendancedate"
   },
   oldschool: {
     type: String,
@@ -59,18 +49,8 @@ var StudentSchema = new Schema({
     required: "Please fill a Student lastfloor"
   },
   birthday: {
-    day: {
-      type: Number,
-      required: "Please fill a Student day"
-    },
-    month: {
-      type: Number,
-      required: "Please fill a Student month"
-    },
-    year: {
-      type: Number,
-      required: "Please fill a Student year"
-    }
+    type: String,
+    required: "Please fill a Student birthday"
   },
   sex: {
     type: String,
@@ -92,6 +72,10 @@ var StudentSchema = new Schema({
     type: String,
     required: "Please fill a Student motherfullname"
   },
+  phonenumber: {
+    type: Number,
+    required: "Please fill a Student phonenumber"
+  },
   pp1set: {
     type: String,
     required: "Please fill a Student pp1set"
@@ -105,32 +89,12 @@ var StudentSchema = new Schema({
     required: "Please fill a Student pp2number"
   },
   enddateofapproval: {
-    day: {
-      type: Number,
-      required: "Please fill a Student day"
-    },
-    month: {
-      type: Number,
-      required: "Please fill a Student month"
-    },
-    year: {
-      type: Number,
-      required: "Please fill a Student year"
-    }
+    type: String,
+    required: "Please fill a Student enddateofapproval"
   },
   approvaldate: {
-    day: {
-      type: Number,
-      required: "Please fill a Student day"
-    },
-    month: {
-      type: Number,
-      required: "Please fill a Student month"
-    },
-    year: {
-      type: Number,
-      required: "Please fill a Student year"
-    }
+    type: String,
+    required: "Please fill a Student approvaldate"
   },
   cause: {
     type: String,
