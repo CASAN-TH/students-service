@@ -73,7 +73,7 @@ var StudentSchema = new Schema({
     required: "Please fill a Student motherfullname"
   },
   phonenumber: {
-    type: Number,
+    type: String,
     required: "Please fill a Student phonenumber"
   },
   pp1set: {
@@ -125,5 +125,6 @@ var StudentSchema = new Schema({
     }
   }
 });
+
 
 mongoose.model("Student", StudentSchema);
