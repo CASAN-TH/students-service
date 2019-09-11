@@ -13,6 +13,7 @@ var credentials, token, mockup;
 describe("Student CRUD routes tests", function () {
   before(function (done) {
     mockup = {
+      class: "p1",
       room: "1",
       studentnumber: "1",
       studentid: "00001",
@@ -44,7 +45,8 @@ describe("Student CRUD routes tests", function () {
       firstname: "first name",
       lastname: "last name",
       email: "test@email.com",
-      roles: ["user"]
+      roles: ["user"],
+      ref1: "1234"
     };
     token = jwt.sign(_.omit(credentials, "password"), config.jwt.secret, {
       expiresIn: 2 * 60 * 60 * 1000
@@ -87,6 +89,8 @@ describe("Student CRUD routes tests", function () {
             }
             var resp = res.body;
             assert.equal(resp.status, 200);
+            assert.equal(resp.data.class, mockup.class);
+            assert.equal(resp.data.school, credentials.ref1);
             assert.equal(resp.data.room, mockup.room);
             assert.equal(resp.data.studentnumber, mockup.studentnumber);
             assert.equal(resp.data.studentid, mockup.studentid);
