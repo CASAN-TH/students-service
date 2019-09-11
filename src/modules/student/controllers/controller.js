@@ -14,6 +14,7 @@ exports.getList = function (req, res) {
         response = { "error": true, "message": "invalid page number, should start with 1" };
         return res.json(response);
     }
+    
     query.skip = size * (pageNo - 1);
     query.limit = size;
     Student.find({school: req.user.ref1}, {}, query, function (err, datas) {
