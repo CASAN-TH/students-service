@@ -4,13 +4,19 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var StudentSchema = new Schema({
+  school: {
+    type: String,
+    required: "Please fill a Student school"
+  },
+  class: {
+    type: String,
+    required: "Please fill a Student class"
+  },
   room: {
-    type: Number,
-    required: "Please fill a Student room"
+    type: Number
   },
   studentnumber: {
-    type: Number,
-    required: "Please fill a Student studentnumber"
+    type: Number
   },
   studentid: {
     type: String,
@@ -33,20 +39,16 @@ var StudentSchema = new Schema({
     required: "Please fill a Student identificationnumber"
   },
   attendancedate: {
-    type: String,
-    required: "Please fill a Student attendancedate"
+    type: String
   },
   oldschool: {
-    type: String,
-    required: "Please fill a Student oldschool"
+    type: String
   },
   province: {
-    type: String,
-    required: "Please fill a Student province"
+    type: String
   },
   lastfloor: {
-    type: String,
-    required: "Please fill a Student lastfloor"
+    type: String
   },
   birthday: {
     type: String,
@@ -57,12 +59,10 @@ var StudentSchema = new Schema({
     required: "Please fill a Student sex"
   },
   nationality: {
-    type: String,
-    required: "Please fill a Student nationality"
+    type: String
   },
   religion: {
-    type: String,
-    required: "Please fill a Student religion"
+    type: String
   },
   fatherfullname: {
     type: String,
@@ -77,28 +77,22 @@ var StudentSchema = new Schema({
     required: "Please fill a Student phonenumber"
   },
   pp1set: {
-    type: String,
-    required: "Please fill a Student pp1set"
+    type: String
   },
   pp1number: {
-    type: String,
-    required: "Please fill a Student pp1number"
+    type: String
   },
   pp2number: {
-    type: String,
-    required: "Please fill a Student pp2number"
+    type: String
   },
   enddateofapproval: {
-    type: String,
-    required: "Please fill a Student enddateofapproval"
+    type: String
   },
   approvaldate: {
-    type: String,
-    required: "Please fill a Student approvaldate"
+    type: String
   },
   cause: {
-    type: String,
-    required: "Please fill a Student cause"
+    type: String
   },
 
   created: {
